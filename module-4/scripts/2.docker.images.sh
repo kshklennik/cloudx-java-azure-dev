@@ -2,9 +2,10 @@
 
 set -e
 
-RESOURCE_GROUP="module-3"
+RESOURCE_GROUP="module-4"
 ACR_NAME="kshpetstoryacr"
 VERSION="1.0.0"
+LOCATION="eastus"
 
 echo "Checking if container registry exists..."
 
