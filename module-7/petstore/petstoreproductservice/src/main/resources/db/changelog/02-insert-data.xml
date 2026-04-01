@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2" author="junie">
+        <!-- Categories -->
+        <insert tableName="category">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Dog Toy"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Dog Food"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Cat Toy"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Cat Food"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="Fish Toy"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="Fish Food"/>
+        </insert>
+
+        <!-- Tags -->
+        <insert tableName="tag">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="small"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="large"/>
+        </insert>
+
+        <!-- Products -->
+        <insert tableName="product">
+            <column name="id" valueNumeric="1"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="name" value="Ball"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-toys/ball.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="1"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="1"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="2"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="name" value="Ball Launcher"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-toys/ball-launcher.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="2"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="3"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="name" value="Plush Lamb"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-toys/plush-lamb.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="3"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="3"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="4"/>
+            <column name="category_id" valueNumeric="1"/>
+            <column name="name" value="Plush Moose"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-toys/plush-moose.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="4"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="4"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="5"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="name" value="Large Breed Dry Food"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-food/large-dog.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="5"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="6"/>
+            <column name="category_id" valueNumeric="2"/>
+            <column name="name" value="Small Breed Dry Food"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-food/small-dog.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="6"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="7"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="name" value="Mouse"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-toys/mouse.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="7"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="7"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="8"/>
+            <column name="category_id" valueNumeric="3"/>
+            <column name="name" value="Scratcher"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-toys/scratcher.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="8"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="8"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="9"/>
+            <column name="category_id" valueNumeric="4"/>
+            <column name="name" value="All Sizes Cat Dry Food"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-food/cat.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="9"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="9"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="10"/>
+            <column name="category_id" valueNumeric="5"/>
+            <column name="name" value="Mangrove Ornament"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/fish-toys/mangrove.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="10"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="10"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="product">
+            <column name="id" valueNumeric="11"/>
+            <column name="category_id" valueNumeric="6"/>
+            <column name="name" value="All Sizes Fish Food"/>
+            <column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/fish-food/fish.jpg?raw=true"/>
+            <column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="11"/>
+            <column name="tags_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="product_tags">
+            <column name="product_id" valueNumeric="11"/>
+            <column name="tags_id" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2" author="junie">
+        <!-- Categories -->
+        <insert tableName="category">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Dog"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Cat"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="Fish"/>
+        </insert>
+
+        <!-- Tags -->
+        <insert tableName="tag">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="doggie"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="large"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="small"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="kittie"/>
+        </insert>
+        <insert tableName="tag">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="fishy"/>
+        </insert>
+
+        <!-- Pets -->
+        <!-- Dog 1-20 -->
+        <insert tableName="pet">
+            <column name="id" valueNumeric="1"/><column name="category_id" valueNumeric="1"/><column name="name" value="Afador"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/afador.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="2"/><column name="category_id" valueNumeric="1"/><column name="name" value="American Bulldog"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/american-bulldog.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="3"/><column name="category_id" valueNumeric="1"/><column name="name" value="Australian Retriever"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/australian-retriever.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="4"/><column name="category_id" valueNumeric="1"/><column name="name" value="Australian Shepherd"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/australian-shepherd.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="5"/><column name="category_id" valueNumeric="1"/><column name="name" value="Basset Hound"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/basset-hound.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="6"/><column name="category_id" valueNumeric="1"/><column name="name" value="Beagle"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/beagle.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="7"/><column name="category_id" valueNumeric="1"/><column name="name" value="Border Terrier"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/border-terrier.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="8"/><column name="category_id" valueNumeric="1"/><column name="name" value="Boston Terrier"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/boston-terrier.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="9"/><column name="category_id" valueNumeric="1"/><column name="name" value="Bulldog"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/bulldog.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="10"/><column name="category_id" valueNumeric="1"/><column name="name" value="Bullmastiff"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/bullmastiff.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="11"/><column name="category_id" valueNumeric="1"/><column name="name" value="Chihuahua"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/chihuahua.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="12"/><column name="category_id" valueNumeric="1"/><column name="name" value="Cocker Spaniel"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/cocker-spaniel.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="13"/><column name="category_id" valueNumeric="1"/><column name="name" value="German Sheperd"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/german-shepherd.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="14"/><column name="category_id" valueNumeric="1"/><column name="name" value="Labrador Retriever"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/labrador-retriever.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="15"/><column name="category_id" valueNumeric="1"/><column name="name" value="Pomeranian"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/pomeranian.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="16"/><column name="category_id" valueNumeric="1"/><column name="name" value="Pug"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/pug.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="17"/><column name="category_id" valueNumeric="1"/><column name="name" value="Rottweiler"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/rottweiler.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="18"/><column name="category_id" valueNumeric="1"/><column name="name" value="Shetland Sheepdog"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/shetland-sheepdog.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="19"/><column name="category_id" valueNumeric="1"/><column name="name" value="Shih Tzu"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/shih-tzu.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="20"/><column name="category_id" valueNumeric="1"/><column name="name" value="Toy Fox Terrier"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/dog-breeds/toy-fox-terrier.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+
+        <!-- Cat 21-30 -->
+        <insert tableName="pet">
+            <column name="id" valueNumeric="21"/><column name="category_id" valueNumeric="2"/><column name="name" value="Abyssinian"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/abyssinian.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="22"/><column name="category_id" valueNumeric="2"/><column name="name" value="American Bobtail"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/american-bobtail.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="23"/><column name="category_id" valueNumeric="2"/><column name="name" value="American Shorthair"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/american-shorthair.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="24"/><column name="category_id" valueNumeric="2"/><column name="name" value="Balinese"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/balinese.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="25"/><column name="category_id" valueNumeric="2"/><column name="name" value="Birman"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/birman.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="26"/><column name="category_id" valueNumeric="2"/><column name="name" value="Bombay"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/bombay.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="27"/><column name="category_id" valueNumeric="2"/><column name="name" value="British Shorthair"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/british-shorthair.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="28"/><column name="category_id" valueNumeric="2"/><column name="name" value="Burmilla"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/burmilla.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="29"/><column name="category_id" valueNumeric="2"/><column name="name" value="Chartreux"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/chartreux.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+        <insert tableName="pet">
+            <column name="id" valueNumeric="30"/><column name="category_id" valueNumeric="2"/><column name="name" value="Cornish Rex"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/cat-breeds/cornish-rex.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+
+        <!-- Fish 31 -->
+        <insert tableName="pet">
+            <column name="id" valueNumeric="31"/><column name="category_id" valueNumeric="3"/><column name="name" value="Goldfish"/><column name="photo_url" value="https://raw.githubusercontent.com/chtrembl/staticcontent/master/fish-breeds/goldfish.jpg?raw=true"/><column name="status" value="AVAILABLE"/>
+        </insert>
+
+        <!-- Pet Tags -->
+        <!-- Dogs 1-20: tags 1(doggie) and 2(large) or 3(small) -->
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="1"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="1"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="2"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="2"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="3"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="3"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="4"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="4"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="5"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="5"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="6"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="6"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="7"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="7"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="8"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="8"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="9"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="9"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="10"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="10"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="11"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="11"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="12"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="12"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="13"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="13"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="14"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="14"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="15"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="15"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="16"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="16"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="17"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="17"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="18"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="18"/><column name="tags_id" valueNumeric="2"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="19"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="19"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="20"/><column name="tags_id" valueNumeric="1"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="20"/><column name="tags_id" valueNumeric="3"/></insert>
+
+        <!-- Cats 21-30: tags 4(kittie) and 3(small) -->
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="21"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="21"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="22"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="22"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="23"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="23"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="24"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="24"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="25"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="25"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="26"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="26"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="27"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="27"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="28"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="28"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="29"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="29"/><column name="tags_id" valueNumeric="3"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="30"/><column name="tags_id" valueNumeric="4"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="30"/><column name="tags_id" valueNumeric="3"/></insert>
+
+        <!-- Fish 31: tags 5(fishy) and 3(small) -->
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="31"/><column name="tags_id" valueNumeric="5"/></insert>
+        <insert tableName="pet_tags"><column name="pet_id" valueNumeric="31"/><column name="tags_id" valueNumeric="3"/></insert>
+    </changeSet>
+
+</databaseChangeLog>

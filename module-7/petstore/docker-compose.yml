@@ -1,0 +1,79 @@
+services:
+  petstoreapp:
+    build:
+      context: ./petstoreapp
+    ports:
+      - "8080:8080"
+    environment:
+      - APPLICATIONINSIGHTS_ENABLED=false
+      - PETSTORE_SECURITY_ENABLED=false
+      - PETSTOREPETSERVICE_URL=http://petstorepetservice:8081
+      - PETSTOREPRODUCTSERVICE_URL=http://petstoreproductservice:8082
+      - PETSTOREORDERSERVICE_URL=http://petstoreorderservice:8083
+    depends_on:
+      - petstorepetservice
+      - petstoreproductservice
+      - petstoreorderservice
+    networks:
+      - petstore-network
+
+  petstorepetservice:
+    build:
+      context: ./petstorepetservice
+    ports:
+      - "8081:8081"
+    environment:
+      - PETSTOREPETSERVICE_SERVER_PORT=8081
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/petstore_pets
+      - SPRING_DATASOURCE_USERNAME=petstore
+      - SPRING_DATASOURCE_PASSWORD=petstore
+    depends_on:
+      - postgres
+    networks:
+      - petstore-network
+
+  petstoreproductservice:
+    build:
+      context: ./petstoreproductservice
+    ports:
+      - "8082:8082"
+    environment:
+      - PETSTOREPRODUCTSERVICE_SERVER_PORT=8082
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/petstore_products
+      - SPRING_DATASOURCE_USERNAME=petstore
+      - SPRING_DATASOURCE_PASSWORD=petstore
+    depends_on:
+      - postgres
+    networks:
+      - petstore-network
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=petstore
+      - POSTGRES_USER=petstore
+      - POSTGRES_PASSWORD=petstore
+      - POSTGRES_MULTIPLE_DATABASES=petstore_pets,petstore_products
+    volumes:
+      - ./postgres-init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - petstore-network
+
+  petstoreorderservice:
+    build:
+      context: ./petstoreorderservice
+    ports:
+      - "8083:8083"
+    environment:
+      - PETSTOREORDERSERVICE_SERVER_PORT=8083
+      - PETSTOREPRODUCTSERVICE_URL=http://petstoreproductservice:8082
+    depends_on:
+      - petstoreproductservice
+    networks:
+      - petstore-network
+
+networks:
+  petstore-network:
+    driver: bridge
