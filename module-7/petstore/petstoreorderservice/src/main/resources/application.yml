@@ -1,6 +1,17 @@
 spring:
   application:
     name: petstoreorderservice
+  cloud:
+    azure:
+      cosmos:
+        endpoint: ${AZURE_COSMOS_ENDPOINT}
+        key: ${AZURE_COSMOS_KEY}
+        database: ${AZURE_COSMOS_DATABASE:petstore}
+        # Required for auto-configuration to pick up the beans
+        gateway-mode: ${AZURE_COSMOS_GATEWAY_MODE:true}
+        # Connection mode (direct/gateway) - gateway is safer in Docker/restricted envs
+        client-config:
+          connection-mode: ${AZURE_COSMOS_CONNECTION_MODE:gateway}
 server:
   port: ${PETSTOREORDERSERVICE_SERVER_PORT:8080}
 

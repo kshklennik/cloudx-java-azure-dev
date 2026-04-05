@@ -2,9 +2,9 @@
 
 set -e
 
-RESOURCE_GROUP="module-4"
+RESOURCE_GROUP="module-7"
 ACR_NAME="kshpetstoryacr"
-VERSION="1.0.0"
+VERSION="1.0.2"
 LOCATION="eastus"
 
 echo "Checking if container registry exists..."
@@ -36,28 +36,28 @@ az acr show --name $ACR_NAME --query loginServer -o tsv
 
 echo "Building and pushing images to $ACR_NAME..."
 
-az acr build \
-  --registry $ACR_NAME \
-  --image petstore/petstoreapp:$VERSION \
-  --file ./petstore/petstoreapp/Dockerfile \
-  ./petstore/petstoreapp
+#az acr build \
+#  --registry $ACR_NAME \
+#  --image petstore/petstoreapp:$VERSION \
+#  --file ./petstore/petstoreapp/Dockerfile \
+#  ./petstore/petstoreapp
 
 az acr build \
   --registry $ACR_NAME \
   --image petstore/petstoreorderservice:$VERSION \
   --file ./petstore/petstoreorderservice/Dockerfile \
   ./petstore/petstoreorderservice
-
-az acr build \
-  --registry $ACR_NAME \
-  --image petstore/petstorepetservice:$VERSION \
-  --file ./petstore/petstorepetservice/Dockerfile \
-  ./petstore/petstorepetservice
-
-az acr build \
-  --registry $ACR_NAME \
-  --image petstore/petstoreproductservice:$VERSION \
-  --file ./petstore/petstoreproductservice/Dockerfile \
-  ./petstore/petstoreproductservice
+#
+#az acr build \
+#  --registry $ACR_NAME \
+#  --image petstore/petstorepetservice:$VERSION \
+#  --file ./petstore/petstorepetservice/Dockerfile \
+#  ./petstore/petstorepetservice
+#
+#az acr build \
+#  --registry $ACR_NAME \
+#  --image petstore/petstoreproductservice:$VERSION \
+#  --file ./petstore/petstoreproductservice/Dockerfile \
+#  ./petstore/petstoreproductservice
 
 echo "All images successfully built and pushed to $ACR_NAME"

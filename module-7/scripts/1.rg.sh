@@ -2,7 +2,7 @@
 
 set -e
 
-RESOURCE_GROUP="module-4"
+RESOURCE_GROUP="module-7"
 LOCATION="eastus"
 
 echo "Checking if resource group exists..."

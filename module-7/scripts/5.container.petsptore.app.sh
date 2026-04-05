@@ -2,7 +2,7 @@
 
 set -e
 
-RESOURCE_GROUP="module-4"
+RESOURCE_GROUP="module-7"
 LOCATION="westus2"
 
 APP_NAME="petstore-app-eastus"
@@ -58,6 +58,5 @@ az containerapp create \
   --memory $MEMORY \
   --registry-server $ACR_NAME.azurecr.io \
   --query properties.configuration.ingress.fqdn
-
 
 echo "Container App deployed successfully."

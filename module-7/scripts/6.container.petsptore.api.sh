@@ -2,7 +2,7 @@
 
 set -e
 
-RESOURCE_GROUP="module-4"
+RESOURCE_GROUP="module-7"
 ENV_NAME="petstore-container-app-env"
 ACR_SERVER="kshpetstoryacr.azurecr.io"
 VERSION="1.0.0"

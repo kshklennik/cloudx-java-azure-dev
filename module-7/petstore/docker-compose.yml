@@ -27,6 +27,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/petstore_pets
       - SPRING_DATASOURCE_USERNAME=petstore
       - SPRING_DATASOURCE_PASSWORD=petstore
+      - SPRING_LIQUIBASE_DEFAULT_SCHEMA=public
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA=public
     depends_on:
       - postgres
     networks:
@@ -42,6 +44,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/petstore_products
       - SPRING_DATASOURCE_USERNAME=petstore
       - SPRING_DATASOURCE_PASSWORD=petstore
+      - SPRING_LIQUIBASE_DEFAULT_SCHEMA=public
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA=public
     depends_on:
       - postgres
     networks:
@@ -69,6 +73,9 @@ services:
     environment:
       - PETSTOREORDERSERVICE_SERVER_PORT=8083
       - PETSTOREPRODUCTSERVICE_URL=http://petstoreproductservice:8082
+      - AZURE_COSMOS_ENDPOINT=${AZURE_COSMOS_ENDPOINT}
+      - AZURE_COSMOS_KEY=${AZURE_COSMOS_KEY}
+      - AZURE_COSMOS_DATABASE=${AZURE_COSMOS_DATABASE:-petstore}
     depends_on:
       - petstoreproductservice
     networks:
